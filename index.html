@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./logo2.png">
+    <title>PhilTech</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">
+          <h1><span id="phil">PHIL</span><span id="tech">TECH</span></h1>
+        </div>
+      
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleSidebar()">
+          ☰
+        </div>
+      
+        <!-- Main Nav for desktop -->
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#careers">Careers</a>
+          <a href="#teachers">Teachers</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      
+      <!-- Sidebar Nav for mobile -->
+      <div class="sidebar" id="sidebar">
+        <a href="#home" onclick="toggleSidebar()">Home</a>
+        <a href="#about" onclick="toggleSidebar()">About</a>
+        <a href="#careers" onclick="toggleSidebar()">Careers</a>
+        <a href="#teachers" onclick="toggleSidebar()">Teachers</a>
+        <a href="#contact" onclick="toggleSidebar()">Contact</a>
+      </div>
+      
+  
+  <section id="home">
+    <div class="slideshow-container">
+        <div class="slide active"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+    </div>
+
+    <div class="hero">
+        <h1>PHILTECH GMA</h1>
+        <p>Philippine Technological Institute of Science Arts and Trade-Central Inc.</p>
+        <a href="https://forms.gle/GyJtCpFuvMmbJAJh9" target="_blank" rel="noopener noreferrer">
+          <button class="enroll-button">Enroll Now</button>
+        </a>
+    </div>
+
+    <!-- Slideshow Navigation Dots -->
+    <div class="slideshow-nav">
+        <div class="nav-dot active" onclick="currentSlide(1)"></div>
+        <div class="nav-dot" onclick="currentSlide(2)"></div>
+        <div class="nav-dot" onclick="currentSlide(3)"></div>
+        <div class="nav-dot" onclick="currentSlide(4)"></div>
+    </div>
+  </section>
+  
+  <section id="about" class="content-section light-bg">
+    <div class="about-container">
+      <!-- Left: Logo -->
+      <div class="about-left">
+        <img src="./logo.png" alt="PhilTech Logo" class="section-logo">
+      </div>
+  
+      <!-- Right: About, Mission, Vision -->
+      <div class="about-right">
+        <div class="about-us">
+            <h2>ABOUT US</h2>
+            <p>PHILTECH WAS FOUNDED WITH A MISSION TO PROVIDE WORLD CLASS EDUCATION TO EVERY STUDENT.OUR DEDICATED TEACHERS, INNOVATIVE PROGRAM, AND VIBRANT COMMUNITY MAKE LEARNING EXCITING AND IMPACTFUL. WE BELIEVE EDUCATION I THE KEY TO UNLOCKING POTENTIAL, AND WE WORK HARD TO CREATE OPPORTUNITIES FOR ALL OUR STUDENTS TO SUCCEED.</p>
+        </div>
+        <div class="mission-vision">
+          <div class="mission">
+            <h3>MISSION</h3>
+            <p>PHILIPPINE TECHNOLOGICAL INSTITUTE OF 
+                SCIENCE, ART AND TRADE, INC. (PHILTECH) IS DEDICATED 
+                TO 
+                GIVE QUALITY EDUCATION TO THE DEVELOPMENT OF 
+                EVERY FILIPINO IT AIMS TO HONE STUDENT WHO 
+                ARE VALUES ORIENTED AND PHYSICALLY ACADEMICALLY 
+                COMMITED TO THE ACHIEVEMENT OF LIFE-LONG 
+                LEARNING AND SERVICE TO THE NATION</p>
+          </div>
+          <div class="vision">
+            <h3>VISION</h3>
+            <p>PHILTECH SHALL EMERGE AS ONE OF THE EDUCATIONAL INSTITUTION IN THE PHILIPPINE THAT CAN PROVIDE ACADEMIC EXCELLENCE, APPROPRIATE TECHNOLOGY AND PRODUCE GRADUATES WHO ARE COMPETITIVE AND SHALL SERVE AS PILLAR iN THIS CHALLENGING WORLD.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section id="careers" class="content-section gray-bg">
+    <div class="section-header">
+      <img src="./logo.png" alt="PhilTech Logo" class="section-logo">
+      <h2>CAREERS</h2>
+    </div>
+    <div class="careers-content">
+      <div class="career-card">
+        <img src="./btvted.png" alt="BTVTEd Icon" class="career-icon">
+        <p>Bachelor in Technical-Vocational Teacher Education (BTVTEd)</p>
+      </div>
+      <div class="career-card">
+        <img src="bscs.png" alt="BSCS Icon" class="career-icon">
+        <p>Bachelor of Science in Computer Science (BSCS)</p>
+      </div>
+      <div class="career-card">
+        <img src="./bsoa.png" alt="BSOA Icon" class="career-icon">
+        <p>Bachelor of Science in Office Administration (BSOA)</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="teachers" class="content-section light-bg">
+    <div class="section-header">
+        <img src="./logo.png" alt="PhilTech Logo" class="section-logo">
+        <h2>TEACHERS</h2>
+    </div>
+    <div class="teachers-slider-container">
+        <button class="slider-arrow left-arrow" onclick="scrollTeachers(-1)">&#10094;</button>
+        <div class="teachers-slider">
+            <div class="teacher-card">
+                <img src="/teacher1.jpeg" alt="Teacher Name">
+                <p>Teacher Name 1</p>
+            </div>
+            <div class="teacher-card">
+                <img src="/teacher2.jpeg" alt="Teacher Name">
+                <p>Teacher Name 2</p>
+            </div>
+            <div class="teacher-card">
+                <img src="/teacher3.jpeg" alt="Teacher Name">
+                <p>Teacher Name 3</p>
+            </div>
+            <div class="teacher-card">
+                <img src="/teacher4.jpeg" alt="Teacher Name">
+                <p>Teacher Name 4</p>
+            </div>
+            <div class="teacher-card">
+                <img src="/teacher5.jpg" alt="Teacher Name">
+                <p>Teacher Name 5</p>
+            </div>
+            <div class="teacher-card">
+                <img src="/teacher6.jpg" alt="Teacher Name">
+                <p>Teacher Name 6</p>
+            </div>
+             <div class="teacher-card">
+                <img src="/teacher7.jpg" alt="Teacher Name">
+                <p>Teacher Name 7</p>
+            </div>
+            <div class="teacher-card">
+                <img src="/teacher8.jpg" alt="Teacher Name">
+                <p>Teacher Name 8</p>
+            </div>
+            <div class="teacher-card">
+                <img src="/teacher9.jpg" alt="Teacher Name">
+                <p>Teacher Name 9</p>
+            </div>
+            <div class="teacher-card">
+                <img src="/teacher10.jpg" alt="Teacher Name">
+                <p>Teacher Name 10</p>
+            </div>
+        </div>
+        <button class="slider-arrow right-arrow" onclick="scrollTeachers(1)">&#10095;</button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-container">
+        <div class="contact-logo">
+            <img src="/logo2.png" alt="PhilTech Logo White" class="section-logo-white">
+            <h1><span id="phil-contact">PHIL</span><span id="tech-contact">TECH</span></h1>
+            <p class="contact-tagline">Philippine Technological Institute of Science Arts and Trade-Central Inc.</p>
+        </div>
+
+        <div class="contact-info-block"> <h3>THE FUTURE BEGINS HERE!</h3>
+            <p>For inquiries and concerns:</p>
+            <p><i class="fas fa-phone-alt"></i> Call us now: 0965547588</p>
+            <p><i class="fas fa-envelope"></i> Christianolegario11@gmail.com</p>
+        </div>
+
+        <div class="horizontal-line"></div> <div class="social-media">
+            <h3>CONNECT WITH US</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/christian.olegario.98" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/inumaki_dale/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/DaleInumaki" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
+    </div>
+
+    </section>
+   
+    <script src="script.js"></script>
+      
+</body>
+</html>

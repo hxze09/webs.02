@@ -1,0 +1,728 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+
+/* Base Reset & Typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3B141C;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  padding-left: 50px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#phil {
+  color: #fff;
+}
+
+#tech {
+  color: #F3961C;
+}
+
+.nav-links {
+  padding-right: 3rem;
+}
+
+.nav-links a {
+  margin-left: 4rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #F3961C;
+}
+
+.nav-links a.active {
+  text-decoration: underline;
+  text-decoration-color: #F3961C;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 3px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding-right: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #3B141C;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar a {
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #F3961C;
+  color: #3B141C;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+/* HOME SECTION */
+ #home {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.slideshow-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Sample slide backgrounds - replace with your actual images */
+.slide:nth-child(1) {
+  background-image: url('./philtech.jpg');
+}
+        
+.slide:nth-child(2) {
+  background-image: url('./philtech\ 1.jpg');
+}
+        
+.slide:nth-child(3) {
+  background-image: url('./philtech\ 2.jpeg');
+}
+        
+.slide:nth-child(4) {
+  background-image: url('./philtech\ 3.jpeg');
+}
+
+#home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+
+.hero {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 0 auto 30px;
+  max-width: 800px;
+}
+
+.enroll-button {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.enroll-button:hover {
+  background-color: #F3961C;
+  color: #3B141C;
+}
+
+/* Slideshow Navigation Dots */
+        .slideshow-nav {
+          position: absolute;
+          bottom: 30px;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          gap: 10px;
+          z-index: 2;
+        }
+
+        .nav-dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.5);
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+
+        .nav-dot.active {
+          background-color: #F3961C;
+        }
+
+        .nav-dot:hover {
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+
+/* GENERAL SECTION */
+.content-section {
+  padding: 80px 20px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.light-bg {
+  background-color: #f9f9f9;
+}
+
+.gray-bg {
+  background-color: #e0e0e0;
+}
+
+.red-bg {
+  background-color: #C6212D;
+  color: white;
+}
+
+/* SECTION HEADER */
+.section-header {
+  margin-bottom: 50px;
+  max-width: 800px;
+}
+
+.section-logo {
+    width: 80px; 
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #3B141C;
+}
+
+.red-bg .section-logo-white {
+    filter: brightness(0) invert(1); 
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.red-bg .contact-logo h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+#phil-contact {
+  color: #fff;
+}
+
+#tech-contact {
+  color: #F3961C;
+}
+
+.contact-tagline {
+  font-size: 0.9rem;
+  margin-top: 5px;
+  opacity: 0.8;
+}
+
+/* ABOUT US */
+.about-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 40px;
+  background-color: #fdfdfd;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-left {
+  flex: 1;
+  text-align: center;
+}
+.section-logo {
+    max-width: 200px;
+    width: 100%;
+  }
+
+.about-right {
+  flex: 2;
+}
+
+.about-right h2 {
+  font-size: 40px;
+  color: #620202;
+  margin-bottom: 20px;
+}
+
+.about-right p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.mission,
+.vision {
+  flex: 1;
+  min-width: 280px;
+  background-color: #fff2f2;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.mission h3,
+.vision h3 {
+  color: #620202;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.mission p,
+.vision p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* CAREERS */
+.careers-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+}
+
+.career-card {
+  background: #fff;
+  padding: 30px;
+  width: 280px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.career-icon {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.career-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3B141C;
+}
+
+/* TEACHERS */
+.teachers-slider-container {
+  position: relative;
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.teachers-slider {
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+  gap: 20px;
+  scrollbar-width: none;
+}
+
+.teachers-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.teacher-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.teacher-card img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.teacher-card p {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #3B141C;
+    margin-top: 10px;
+  }
+  
+  /* ==================== Slider Arrows ==================== */
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 10px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+  }
+  
+  .slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .left-arrow {
+    left: -60px;
+  }
+  
+  .right-arrow {
+    right: -70px;
+  }
+  
+  /* ==================== Contact Section ==================== */
+  #contact {
+    background-color: #3B141C;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px 20px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  /* Logo and Institute Name */
+  .contact-logo {
+    margin-bottom: 10px;
+  }
+  
+  .section-logo-white {
+    width: 110px;
+    height: auto;
+    margin: 0 auto 10px;
+    display: block;
+    border-radius: 50%;
+  }
+  
+  .contact-logo h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    line-height: 1;
+    font-weight: bold;
+  }
+  
+  #phil-contact {
+    color: #fff;
+  }
+  
+  #tech-contact {
+    color: #F3961C;
+  }
+  
+  .contact-tagline {
+    font-size: 1rem;
+    margin-top: 5px;
+    opacity: 0.9;
+  }
+  
+  /* Contact Info Block */
+  .contact-info-block {
+    margin-bottom: 15px;
+  }
+  
+  .contact-info-block h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .contact-info-block p {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  
+  .contact-info-block p i {
+    margin-right: 10px;
+    color: #F3961C;
+    font-size: 1.15rem;
+  }
+  
+  /* Social Media */
+  .social-media {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .social-media h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 2.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #F3961C;
+  }
+  
+  /* Divider Line */
+  .horizontal-line {
+    width: 85%;
+    max-width: 600px;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto;
+  }
+  
+  /* ==================== Responsive ==================== */
+  @media(max-width: 1200px){
+    .left-arrow {
+        left: -60px;
+      }
+    
+      .right-arrow {
+        right: -50px;
+      }
+    .teachers-slider-container {
+        max-width: 800px;
+    }
+    
+  }
+
+  @media (max-width: 975px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .navbar {
+      padding: 10px 20px;
+    }
+  
+    .nav-links a {
+      margin: 0 0.8rem;
+    }
+  
+    .logo {
+      padding-left: 0;
+      text-align: center;
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .content-section {
+      padding: 60px 15px;
+    }
+  
+    .left-arrow {
+      left: -60px;
+    }
+  
+    .right-arrow {
+      right: -70px;
+    }
+  
+    .teacher-card {
+      min-width: 150px;
+    }
+    .teachers-slider-container {
+        max-width: 500px;
+      }
+      
+  }
+
+  @media (max-width: 650px) {
+    .teachers-slider-container {
+      max-width: 270px;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .hero p {
+      font-size: 0.9rem;
+    }
+  
+    .content-section {
+      padding: 40px 10px;
+    }
+  
+    .teacher-card {
+      min-width: 130px;
+      font-size: 0.9rem;
+    }
+  
+    .slider-arrow {
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+      padding: 10px;
+    }
+  
+    .left-arrow {
+      left: -40px;
+    }
+  
+    .right-arrow {
+      right: -40px;
+    }
+  
+    .navbar {
+      padding: 8px 15px;
+    }
+  
+    .contact-logo h1 {
+      font-size: 2.5rem;
+    }
+  
+    .contact-info-block h3,
+    .social-media h3 {
+      font-size: 1.5rem;
+    }
+  
+    .social-icons a {
+      font-size: 1.8rem;
+    }
+  
+    .horizontal-line {
+      width: 90%;
+    }
+  
+    .enroll-button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  }
